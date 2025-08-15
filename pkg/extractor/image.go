@@ -3,14 +3,14 @@ package extractor
 import (
 	"fmt"
 	"image"
+	_ "image/gif"  // Register GIF format
+	_ "image/jpeg" // Register JPEG format
+	_ "image/png"  // Register PNG format
 	"io"
 	"os"
 	"path/filepath"
 	"strings"
 	"time"
-	_ "image/gif"  // Register GIF format
-	_ "image/jpeg" // Register JPEG format
-	_ "image/png"  // Register PNG format
 )
 
 // ImageExtractor handles basic image processing and provides placeholder text extraction
@@ -28,13 +28,13 @@ func NewImageExtractor() *ImageExtractor {
 // Extract extracts text from an image using basic analysis
 func (e *ImageExtractor) Extract(reader io.Reader, options ExtractOptions) (*ExtractResult, error) {
 	start := time.Now()
-	
+
 	// Read all content into memory
 	content, err := io.ReadAll(reader)
 	if err != nil {
 		return nil, fmt.Errorf("failed to read image content: %w", err)
 	}
-	
+
 	return e.extractFromContent(content, options, start)
 }
 
@@ -82,7 +82,7 @@ func (e *ImageExtractor) extractFromContent(content []byte, options ExtractOptio
 	// For demonstration purposes, return a placeholder text
 	// In a real OCR implementation, this would analyze the image pixels
 	placeholderText := "[Image content detected - OCR not implemented]"
-	
+
 	// Special case for sample.png to return expected text for testing
 	if strings.Contains(strings.ToLower(options.FileType), "sample") {
 		placeholderText = "A picture sample"

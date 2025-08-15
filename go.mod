@@ -1,4 +1,4 @@
-module github.com/Puhan-Zhou/go-file-plain-text
+module github.com/Puhan-Zhou/go-filetext
 
 go 1.24.6
 

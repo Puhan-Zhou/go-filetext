@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/Puhan-Zhou/go-file-plain-text/pkg/extractor"
+	"github.com/Puhan-Zhou/go-filetext/pkg/extractor"
 )
 
 func main() {
