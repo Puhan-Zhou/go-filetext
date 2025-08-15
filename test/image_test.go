@@ -4,7 +4,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Puhan-Zhou/go-filetext/pkg/extractor"
+	"github.com/Puhan-Zhou/go-filetext/extractor"
 )
 
 func TestImageExtraction(t *testing.T) {
