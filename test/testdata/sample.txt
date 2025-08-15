@@ -1,0 +1,19 @@
+This is a sample text file for testing the Go plaintext getter library.
+
+It contains multiple lines of text with various content:
+- Phone numbers: 123-456-7890, (555) 123-4567
+- Email addresses: test@example.com, user.name+tag@domain.co.uk
+- URLs: https://www.example.com, http://test.org/path?param=value
+- Numbers: 42, 3.14159, -17
+- Dates: 2024-01-15, 01/15/2024, January 15, 2024
+
+This file can be used to test:
+1. Basic text extraction
+2. Regex pattern matching
+3. File type detection
+4. Encoding handling
+
+Special characters: áéíóú, ñ, ç, ü, ß
+Unicode: 🚀 🌟 💻 📝
+
+End of sample file.
