@@ -7,17 +7,8 @@ import (
 	"github.com/gabriel-vasile/mimetype"
 )
 
-// ExtractorFactory creates appropriate extractors based on file type
-type ExtractorFactory struct {
-}
-
-// NewExtractorFactory creates a new extractor factory
-func NewExtractorFactory() *ExtractorFactory {
-	return &ExtractorFactory{}
-}
-
 // CreateExtractorFromPath creates an extractor based on file path using filetype detection
-func (f *ExtractorFactory) CreateExtractorFromPath(filePath string) (TextExtractor, error) {
+func CreateExtractorFromPath(filePath string) (TextExtractor, error) {
 	// Use filetype module for content-based detection
 	mtype, err := mimetype.DetectFile(filePath)
 	if err != nil {

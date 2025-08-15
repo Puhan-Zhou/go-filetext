@@ -18,9 +18,7 @@ func main() {
 
 	filename := os.Args[1]
 
-	// Create factory and extractor based on file extension
-	factory := extractor.NewExtractorFactory()
-	extractorInstance, err := factory.CreateExtractorFromPath(filename)
+	extractorInstance, err := extractor.CreateExtractorFromPath(filename)
 	if err != nil {
 		log.Fatalf("Error creating extractor for %s: %v", filename, err)
 	}
